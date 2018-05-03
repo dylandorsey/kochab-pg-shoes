@@ -2,8 +2,6 @@ app.service('ShoeStoreService', ['$http', function ($http) {
     console.log('ShoeStoreService is loaded');
     var self = this;
 
-
-
     self.shoeStoreInventory = {
         inventory: []
     };
@@ -11,18 +9,18 @@ app.service('ShoeStoreService', ['$http', function ($http) {
     self.getShoeStoreInventory = function () {
         console.log('init getShoeStoreInventory function');
         console.log(self.shoeStoreInventory.inventory);
-            $http({
-                method: 'GET',
-                url: '/shoe-store'
+        $http({
+            method: 'GET',
+            url: '/shoe-store'
+        })
+            .then(function (response) {
+                console.log(response);
+                self.shoeStoreInventory.inventory = response.data;
+                console.log(self.shoeStoreInventory.inventory)
             })
-                .then(function (response) {
-                    console.log(response);
-                    self.shoeStoreInventory.inventory = response.data;
-                    console.log(self.shoeStoreInventory.inventory)
-                })
-                .catch(function (error) {
-                    console.log('error on /shoes GET', error);
-                });
+            .catch(function (error) {
+                console.log('error on /shoes GET', error);
+            });
     }
 
     self.deleteShoe = function (shoe) {
@@ -39,7 +37,7 @@ app.service('ShoeStoreService', ['$http', function ($http) {
             .catch(function (error) {
                 console.log('error on /shoes DELETE', error);
             })
-    self.getShoeStoreInventory();
+        self.getShoeStoreInventory();
     }
 
     self.updateShoe = function (shoe) {
@@ -55,6 +53,6 @@ app.service('ShoeStoreService', ['$http', function ($http) {
             .catch(function (error) {
                 console.log('error on /shoes DELETE', error);
             })
-    self.getShoeStoreInventory();
+        self.getShoeStoreInventory();
     }
 }]);

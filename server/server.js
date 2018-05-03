@@ -3,7 +3,6 @@ const app = express();
 const bodyParser = require('body-parser');
 const shoeRouter = require('./routes/shoe.route');
 
-
 // use body-parser
 app.use(bodyParser.json());
 

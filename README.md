@@ -8,6 +8,6 @@ Base Mode
 Stretch Goals
 Our shoe store also sells socks!
 
-move the pool code to a pool.js file in the modules folder
+[x] move the pool code to a pool.js file in the modules folder
 Create separate client-side views for the Home, Shoes, and Socks pages.
 The socks page should allow GET, POST, PUT, and DELETE for socks
