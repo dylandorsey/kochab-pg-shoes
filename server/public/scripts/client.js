@@ -6,8 +6,11 @@ app.config(function ($routeProvider) {
     }).when('/shoe-store', {
         templateUrl: 'views/shoe-store.html',
         controller: 'ShoeStoreController as vm'
+    }).when('/sock-store', {
+        templateUrl: 'views/sock-store.html',
+        controller: 'ShoeStoreController as vm'
     })
-        .otherwise({
+    .otherwise({
             template: '<h2>404</h2>'
-        });
+    });
 });

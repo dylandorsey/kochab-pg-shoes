@@ -23,6 +23,22 @@ app.service('ShoeStoreService', ['$http', function ($http) {
             });
     }
 
+    self.addNewShoe = function (newShoe) {
+        $http({
+            method: 'POST',
+            url: '/shoe-store',
+            data: newShoe
+        })
+            .then(function (response) {
+                console.log(response);
+            })
+            .catch(function (error) {
+                console.log('error on /shoes DELETE', error);
+            })
+
+        self.getShoeStoreInventory();
+    }
+
     self.deleteShoe = function (shoe) {
         console.log('init deleteShoe function');
         console.log(shoe);

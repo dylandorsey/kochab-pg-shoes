@@ -1,4 +1,7 @@
 <div>
+    <input ng-model="newShoe.name">
+    <input ng-model="newShoe.cost">
+    <button ng-click="vm.addNewShoe(newShoe)">Add new shoe</button>
     <ul ng-repeat="shoe in vm.shoeStoreInventory.inventory">
         <input ng-model="shoe.name"></input>
         <input ng-model="shoe.cost"></input>

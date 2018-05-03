@@ -7,6 +7,7 @@ app.controller('ShoeStoreController', ['ShoeStoreService', '$http', function (Sh
     self.shoeStoreInventory = ShoeStoreService.shoeStoreInventory;
     self.deleteShoe = ShoeStoreService.deleteShoe;
     self.updateShoe = ShoeStoreService.updateShoe;
+    self.addNewShoe = ShoeStoreService.addNewShoe;
     // self.shoeStoreInventory = ShoeStoreService.shoeStoreInventory;
 
 }]);

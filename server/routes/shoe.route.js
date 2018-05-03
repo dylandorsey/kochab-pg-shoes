@@ -4,7 +4,7 @@ const pool = require('../modules/pool');
 router.post('/', (req, res) => {
     const newShoe = req.body;
     pool.query(`INSERT INTO "shoes" ("name", "cost") 
-                VALUES ($1, $2, $3); `, [newShoe.name, newShoe.cost, newShoe.id])
+                VALUES ($1, $2); `, [newShoe.name, newShoe.cost])
         .then((results) => {
             res.sendStatus(200);
         })
