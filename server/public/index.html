@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vendors/angular.js"></script>
+    <script src="vendors/angular-route.js"></script>
+    <script src="scripts/client.js"></script>
+    <script src="scripts/controllers/shoe-store.controller.js"></script>
+    <script src="scripts/services/shoe-store.service.js"></script>
+    <title>PG Intro</title>
+</head>
+<body ng-app="ShoeStoreApp">
+    <h1>PG Intro</h1>
+    <h2>Shoe Store App</h2>
+    <ul>
+        <li>
+            <a ng-href="#!/">Home</a>
+        </li>
+        <li>
+            <a ng-href="#!/shoe-store">Shoes</a>
+        </li>
+    </ul>
+    <ng-view></ng-view>
+</body>
+</html>
