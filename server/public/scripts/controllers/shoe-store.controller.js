@@ -3,10 +3,9 @@ app.controller('ShoeStoreController', ['ShoeStoreService', '$http', function (Sh
     var self = this;
     self.message = 'check it';
     self.getShoeStoreInventory = ShoeStoreService.getShoeStoreInventory;
-    self.shoeStoreInventory = ShoeStoreService.testShoeStoreInventory;
-    self.test = function () {
-        console.log(self.shoeStoreInventory.inventory);
-    }
+    self.getShoeStoreInventory();
+    self.shoeStoreInventory = ShoeStoreService.shoeStoreInventory;
+    self.deleteShoe = ShoeStoreService.deleteShoe;
     // self.shoeStoreInventory = ShoeStoreService.shoeStoreInventory;
 
 }]);
