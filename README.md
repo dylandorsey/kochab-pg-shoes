@@ -2,9 +2,9 @@
 
 Base Mode
 [x] Create client-side angular code to retrieve the array of shoes and display them on the DOM.
-[x]Move all $http requests to an angular service
-[x]Allow a user to delete a shoe by selecting a delete button next to it on the DOM
-Allow a user to edit a shoe by clicking a save button next to it on the DOM
+[x] Move all $http requests to an angular service
+[x] Allow a user to delete a shoe by selecting a delete button next to it on the DOM
+[x] Allow a user to edit a shoe by clicking a save button next to it on the DOM
 Stretch Goals
 Our shoe store also sells socks!
 

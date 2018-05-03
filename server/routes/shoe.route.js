@@ -68,4 +68,20 @@ router.delete('/', (req, res) => {
         });
 });
 
+router.put('/', (req, res) => {
+    const shoe = req.body;
+    console.log(shoe.id);
+    pool.query(`UPDATE "shoes"
+    SET "name" = ($1), "cost" = ($2)
+    WHERE "id" = ($3);`, [shoe.name, shoe.cost, shoe.id])
+
+        .then((results) => {
+            res.sendStatus(200);
+        })
+        .catch((error) => {
+            console.log('problemo with DELETE from database', error);
+            res.sendStatus(500);
+        });
+});
+
 module.exports = router;
