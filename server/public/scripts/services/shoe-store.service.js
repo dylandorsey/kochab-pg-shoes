@@ -42,4 +42,19 @@ app.service('ShoeStoreService', ['$http', function ($http) {
     self.getShoeStoreInventory();
     }
 
+    self.updateShoe = function (shoe) {
+        console.log('init udateShoe function with', shoe.name, shoe.cost);
+        // $http({
+        //     method: 'DELETE',
+        //     url: '/shoe-store',
+        //     params: shoe
+        // })
+        //     .then(function (response) {
+        //         console.log(response);
+        //     })
+        //     .catch(function (error) {
+        //         console.log('error on /shoes DELETE', error);
+        //     })
+    self.getShoeStoreInventory();
+    }
 }]);
