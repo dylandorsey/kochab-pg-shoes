@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(express.static('server/public'));
 
 // Routes
-app.use('/shoe', shoeRouter);
+app.use('/shoe-store', shoeRouter);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {

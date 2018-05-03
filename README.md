@@ -1,8 +1,8 @@
 # kochab-services-shoes
 
 Base Mode
-Create client-side angular code to retrieve the array of shoes and display them on the DOM.
-Move all $http requests to an angular service
+[x] Create client-side angular code to retrieve the array of shoes and display them on the DOM.
+[x]Move all $http requests to an angular service
 Allow a user to delete a shoe by selecting a delete button next to it on the DOM
 Allow a user to edit a shoe by clicking a save button next to it on the DOM
 Stretch Goals

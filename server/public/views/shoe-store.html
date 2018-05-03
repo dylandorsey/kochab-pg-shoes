@@ -1,6 +1,7 @@
 <div>
     {{vm.message}}
+    <button ng-click="vm.getShoeStoreInventory()">Get Shoe Store Inventory</button>
     <ul>
-        <li ng-repeat="shoe in vm.shoes">{{item}}</li>
+        <li ng-repeat="shoe in vm.shoeStoreInventory.inventory">{{shoe.name}} ${{shoe.cost}}</li>
     </ul>
 </div>
