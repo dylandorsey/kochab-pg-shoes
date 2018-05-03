@@ -1,24 +1,5 @@
 const router = require('express').Router();
 const pg = require('pg');
-const shoes = [
-    {
-        name: 'Red Wing',
-        cost: 250
-    },
-    {
-        name: 'Puma Soliel V2',
-        cost: 40
-    },
-    {
-        name: 'Space Boots',
-        cost: 10
-    },
-    {
-        name: 'clown shoes',
-        cost: 5
-    }
-];
-
 
 // ---- Move this connection to a module --- //
 
@@ -57,13 +38,19 @@ router.post('/', (req, res) => {
             res.sendStatus(200);
         })
         .catch((error) => {
-            console.log('problem with post to database', error);
+            console.log('problem with POST to database', error);
             res.sendStatus(500);
         });
 });
 
 router.get('/', (req, res) => {
-    res.send(shoes);
+    pool.query(`SELECT "name", "cost" FROM "shoes";`)
+    .then((results)=>{
+        res.send(results.rows);
+    })
+    .catch((error) => {
+        console.log('problem with GET from database', error);
+    });
 });
 
 module.exports = router;
